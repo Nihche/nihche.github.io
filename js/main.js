@@ -4,7 +4,7 @@ var k_k = 0.1;//eng na klick
 
 //energija
 var e1 = 0; //d_energija
-var e1_maks = 12; //maks capaciteta
+var e1_maks = 2; //maks capaciteta
 var e1_sec = 0; // energija na sekundo
 var e2 = 0;//pretvorjenje energije
 var e2_pre = 0.005; //hitrost pretvarjanja
@@ -60,15 +60,15 @@ var interval = setInterval(paradoks,100);
 function paradoks(){
 //izpis
 //izpis zgoraj
-    document.getElementById("d_enr").innerHTML = e1.toFixed(2) + "/" + e1_maks.toFixed(0);
+    document.getElementById("d_enr").innerHTML = e1.toFixed(2);
     document.getElementById("d_mat").innerHTML = m1.toFixed(2);
 //izpis obstoj 
     e1_sec = (k_p + (m1*m1_p))*10;
-    document.getElementById("kmn_eng").innerHTML = e1.toFixed(2) + "/" + e1_maks.toFixed(0);
+    document.getElementById("kmn_eng").innerHTML = e1.toFixed(2);
     document.getElementById("kmn_sec").innerHTML = e1_sec.toFixed(3) + "/sec";
     if(e2>=10 || e2==0){
-        document.getElementById("ob_eng").innerHTML = e2.toFixed(0);
-    }else{document.getElementById("ob_eng").innerHTML = e2.toFixed(2);}
+        document.getElementById("ob_eng").innerHTML = e2.toFixed(0) + "/" + e1_maks.toFixed(0);
+    }else{document.getElementById("ob_eng").innerHTML = e2.toFixed(2) + "/" + e1_maks.toFixed(0);}
     if(m2>=10 || m2==0){
         document.getElementById("ob_mat").innerHTML = m2.toFixed(0);;
     }else{document.getElementById("ob_mat").innerHTML = m2.toFixed(2);}
@@ -89,26 +89,15 @@ function paradoks(){
     hlap();
 }
 function kmn(){
-    if(e1 < e1_maks){
+    if(e1 < 15){
             e1 = e1 + k_k;
             e1_skp = e1_skp + k_k;
             
-    }else{
-        e1 = e1_maks;
     }
 }
 function passive(){
-    
-    if(e1 < e1_maks){
         e1 = e1+k_p + (m1*m1_p);
-        
-        
         e1_skp = e1_skp + k_p + (m1*m1_p);
-        
-        
-    }else{
-        e1 = e1_maks;
-    }
 }
 function hlap(){
     if(m1 >0){
@@ -137,6 +126,11 @@ function conversion(){
         if(e1 > 0){
             e2 = e2 + t_chr;
             e1 = e1 - t_chr;
+            if(e2 >= e1_maks){
+                an_onf = 'on';
+                trn_gmb.style.animation ="paused";
+                trn_gmb.style.animation ="converting 1s infinite";
+            }
         }
         if(e1 <= 0){
             e1 = 0;
