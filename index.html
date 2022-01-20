@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Black rock</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta name="author" content="Kotnik Miha">
+    <meta charset="UTF-8">
+    <meta name="description" content="Game">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.00, minimum-scale=1.00">   
+</head>
+<body>
+    <div id="min_d_mat">
+             <a id="d_enr" class="izpis"></a>
+            <img src="Slike/d-energ.png" class="icon_top">
+            <a id="d_enr_sec" ></a>
+            <a class="izpis" id="d_mat"></a>
+            <img src="Slike/d-matter.png" class="icon_top">
+        </div>
+    <div id="spod_meni">
+        <div id="spod_meni_gumb">              
+            <a class="modb" id="modb1" href="#openModal1" >Know</a>
+            <a class="modb" id="modb2" href="#openModal2">Mozide</a>
+            <a class="modb" id="modb3" href="#openModal3">Creat</a>
+            <a class="modb" id="modb4" href="#openModal4">Stat</a>             
+            <a class="modb" id="modb0" href="#none">&#10006;</a>             
+        </div> 
+    </div>
+ <!--.Spodnjidel-->             
+    <div id="jedro">
+<!--Kamen zavihek-->
+        <div class="modal_zero" id="modal_stuff0">
+            <div id="obstoj">
+                <div id="ob_kamen">
+                    
+                    <img id="kamen" src="Slike/kamen1.png" onclick="kmn()">
+                    
+                    <img id="krog1" src="Slike/krog1.png">
+                    <br>
+                <div id="und_kmn">
+                    <a id="kmn_eng"></a>
+                <img class="ob_icon" id="ob_engi" src="Slike/d-energ.png"><br>   
+                <a id="kmn_sec"></a>
+                    </div>    
+                
+
+            </div>
+            <div id="ob_pre">
+                    <div class="ob_con" id="ob_eng_d">
+                        <a class="ob_izpis" id="ob_eng"></a>
+                        <img class="ob_icon" id="ob_engi" src="Slike/d-energ.png">
+                    </div>
+                    <div class="ob_con" id="ob_tra">
+                        <img id="con_gmb" src="Slike/tranform.png" onclick="pret()"> 
+                    </div>
+                    <div class="ob_con" id="ob_mat_d">
+                        <a class="ob_izpis" id="ob_mat"></a>
+                        <img class="ob_icon" id="ob_mat_icon" src="Slike/d-matter.png"> 
+                    </div>
+                </div>    
+        </div>
+        </div>
+<!--modal zavihki-->    
+        <div id="modal">
+<!--.knw Prvi zavihek.--> 
+            <div id="openModal1" class="modalDialog">
+                <div class="modal_stfu" id="modal_stuff1"> 
+                    </div>
+                </div>
+<!--.mozaideDrugi zavihek.--> 
+            <div id="openModal2" class="modalDialog">
+                <div class="modal_stfu"  id="modal_stuff2">
+                    <div id="mozaide top">
+                        <div class="mzd_top">
+                            <a>Mozaide is mozaic of ideas.<br>You own:<a id="total_mzd"></a></a>
+                        </div>
+                        <div id="mzd_gumb" class="mzd_top">
+                            Price:<a id="mzd_price" class="izpis"></a>
+                            <img src="Slike/d-matter.png" class="icon_button">
+                            <div class="m_gumb" onclick="ustrvari_mzd()">Buy</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="mozaide_content"></div>
+                </div>
+            </div>             
+<!--. create upgradeTretji zavihek.--> 
+            <div id="openModal3" class="modalDialog">
+                <div class="modal_stfu"  id="modal_stuff3">
+                    <div id="upgrade">
+                        <div class="up" id="maks_cap">
+                            Current DE capacity:<a id="maks_enr"></a>&nbsp;&rarr;
+                            &nbsp;  Upgrade to:<a id="maks_enr_af"></a>
+                            &nbsp; Price:<a id="maks_enr_p"></a>
+                            <img src="Slike/plus.png" onclick="up_cap()">
+                        </div>
+                        <hr>
+                        <div class="up" id="con_rate">
+                            Current Conversion rate :<a id="con_rt"></a>&nbsp;&rarr;
+                            &nbsp;  Upgrade to:<a id="con_rt_af"></a>
+                            &nbsp; Price:<a id="con_rt_p"></a>
+                            <img src="Slike/plus.png" onclick="up_con()">
+                        </div>
+                        <!--<div id="up_cap" class="upgrd">
+                        </div>-->
+                    </div>
+                </div>
+            </div>              
+<!--. statsČetrti zavihek.--> 
+            <div id="openModal4" class="modalDialog">
+                <div class="modal_stfu"  id="modal_stuff4">
+                </div>
+            </div>
+    </div>     
+</div>     
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script src="js/main.js"></script>   
+</body>
+</html>

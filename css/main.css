@@ -1,0 +1,214 @@
+body{   
+    background-color:darkgray;
+    overflow: hidden;
+    margin:0;
+    margin-left: 10%;
+    margin-right: 10%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+.modal_zero{
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.modal_stfu{
+    position:fixed;
+    background-color: whitesmoke;
+    width: 80%;
+    height: 90%;
+    overflow: auto;
+}
+#spod_meni{
+    position: absolute;
+    background-color: black;
+    bottom: 0%;
+    height: 7%;
+    width: 80%;
+    z-index: 1; 
+}
+@media (max-width: 900px){
+    body{
+        margin: 0%;
+    }
+    #spod_meni{
+        width: 100%;
+    }
+    .modal_stfu{
+        width: 99%;
+        margin-left: 2px; 
+    }
+    .modal_zero{
+        width: 100%;
+    }
+}
+.icon_top{
+    margin-right: 2%;
+    height: 3%;
+}
+#min_d_mat{
+    background-color: whitesmoke;
+    border-bottom: 1px solid;
+    position: relative;
+    text-align: end;
+    padding-right: 1%;
+}
+.izpis{
+    font-size:1.7em;
+}
+#spod_meni_gumb{
+    position: relative;
+    text-align: center;
+    background-color: black;
+}
+.modb{
+    font-size: 130%;
+    text-align: center;
+    height: 80%;
+    min-width: 15%;
+    height: 59%;
+    width:auto;
+    color: whitesmoke;
+    padding-top: 2%;
+    text-decoration: none;
+    display: inline-block;  
+    background-color: black;
+    -moz-box-shadow:    inset 0 0 5px grey;
+   -webkit-box-shadow: inset 0 0 5px grey;
+   box-shadow:         inset 0 0 5px grey;
+}
+.modb:hover{
+    background-color: grey;
+   -moz-box-shadow:    inset 0 0 7px darkgrey;
+   -webkit-box-shadow: inset 0 0 7px darkgrey;
+   box-shadow:         inset 0 0 7px darkgrey;
+}
+.modalDialog {
+        display: none;    
+}
+.modalDialog:target {
+        display: block;
+}
+
+#obstoj{
+    border: 1px solid;
+    height: 100%;
+}
+.ob_icon{
+    width: 3vh;
+}
+.ob_izpis{
+    font-size: 2.5vh;
+}
+.ob_con{
+    display: inline-block;
+    width: 30%;
+}
+
+#kamen{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    max-width: 10vh;
+}
+#und_kmn{
+    position: absolute;
+    text-align: center;
+    display: block;
+    top: 69%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#ob_tra{
+    width: 20%;
+}
+#ob_pre{
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+}
+#con_gmb{
+    padding: 2vh;
+    width: 5vh;
+    margin-left: -0.5vh;
+}
+
+#krog1{
+        position: absolute;
+    text-align: center;
+    display: block;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 50vh;
+    z-index: -1;
+}
+
+/*mozaide*/
+.cls_d_mzd{
+    float: left;
+    display: inline-block;
+    margin-left: 1%;
+    text-align: center; 
+}
+.cls_mzd{
+    height: 20vh;
+    width: 20vh;
+    margin-left: 1%;
+}
+.m_izpis{
+   color: green;
+}
+#mozaide box{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+}
+#mozaide_content{
+    display: inline-block;
+}
+.mzd_top{
+    display: inline-block;
+
+}
+
+/*Animation*/
+@keyframes converting {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
