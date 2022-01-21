@@ -80,6 +80,9 @@ function paradoks(){
     document.getElementById("con_rt").innerHTML = e2_pre.toFixed(3);
     document.getElementById("con_rt_af").innerHTML = (e2_pre*2).toFixed(3);
     document.getElementById("con_rt_p").innerHTML = p1_con.toFixed(2);
+    document.getElementById("con_pre").innerHTML = t_chr.toFixed(3);
+    document.getElementById("con_pre_af").innerHTML = (t_chr*2).toFixed(3);
+    document.getElementById("con_pre_p").innerHTML = p1_pre.toFixed(0);
     //--------
     document.getElementById("mzd_price").innerHTML = mzd_prc.toFixed(2);
     document.getElementById("total_mzd").innerHTML = mzd_own.toFixed(0) + "/" + mzd_all.toFixed(0);
@@ -183,6 +186,14 @@ function up_con(){
         e2_pre = e2_pre * 2;
     }
 }
+function up_pre(){
+    if(m1>=p1_pre){
+        m1 = m1 - p1_pre;
+        p1_pre = p1_pre * 10;
+        t_chr = t_chr * 2;
+    }
+}
+
 function ustrvari_mzd(){
     
     if(m1 >= mzd_prc){
