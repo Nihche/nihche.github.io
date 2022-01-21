@@ -46,6 +46,7 @@ var link_slk_mzd = ["Mozaide/000_Mozaide.jpg", "Mozaide/001_Luna_sanje.jpg", "Mo
 //upgrades price------------------
 var p1_cap = 10;
 var p1_con = 1;
+var p1_pre = 100;
 
 var m2 = 0;
 //converting
