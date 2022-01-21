@@ -3,7 +3,7 @@ var k_p = 0.0001; //kamen passive
 var k_k = 0.1;//eng na klick
 
 //energija
-var e1 = 0; //d_energija
+var e1 = 10; //d_energija
 var e1_maks = 2; //maks capaciteta
 var e1_sec = 0; // energija na sekundo
 var e2 = 0;//pretvorjenje energije
@@ -92,13 +92,7 @@ function paradoks(){
     conversion();
     hlap();
 }
-function kmn(){
-    if(e1 < 15){
-            e1 = e1 + k_k;
-            e1_skp = e1_skp + k_k;
-            
-    }
-}
+
 function passive(){
         e1 = e1+k_p + (m1*m1_p);
         e1_skp = e1_skp + k_p + (m1*m1_p);
