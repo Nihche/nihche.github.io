@@ -44,7 +44,7 @@ var mzd_own = 0;
 var link_slk_mzd = ["Mozaide/000_Mozaide.jpg", "Mozaide/001_Luna_sanje.jpg", "Mozaide/002_Barve.jpg", "Mozaide/003_Marvin.jpg", "Mozaide/004_Palica.jpg", "Mozaide/005_Cas.jpg", "Mozaide/006_Doodle.jpg", "Mozaide/007_Jaz-ed.jpg", "Mozaide/008_Jaz-mn.jpg", "Mozaide/009_Kamen.jpg", "Mozaide/010_Kazala.jpg", "Mozaide/011_Jing-jang.jpg", "Mozaide/012_Luna-gore.jpg", "Mozaide/014_Luna-sijaj.jpg", "Mozaide/015_Luna-nic.jpg"];
 
 //upgrades price------------------
-var p1_cap = 1;
+var p1_cap = 10;
 var p1_con = 1;
 
 var m2 = 0;
