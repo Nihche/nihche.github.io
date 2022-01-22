@@ -7,12 +7,12 @@ var e1 = 10; //d_energija
 var e1_maks = 2; //maks capaciteta
 var e1_sec = 0; // energija na sekundo
 var e2 = 0;//pretvorjenje energije
-var e2_pre = 0.005; //hitrost pretvarjanja
+var e2_pre = 0.005; //hitrost v pretvarjanje
 var e1_skp = 0;//vsa energija skupaj
 
 //material------------------
 var m1 = 0;
-var m1_p = 0.0001618;
+var m1_p = 0.00015;
 var m1_h = 0.00005;
 var m2 = 0; // d_mat v pretvorbi
 //mozaide------------------
@@ -44,7 +44,7 @@ var mzd_own = 0;
 var link_slk_mzd = ["Mozaide/000_Mozaide.jpg", "Mozaide/001_Luna_sanje.jpg", "Mozaide/002_Barve.jpg", "Mozaide/003_Marvin.jpg", "Mozaide/004_Palica.jpg", "Mozaide/005_Cas.jpg", "Mozaide/006_Doodle.jpg", "Mozaide/007_Jaz-ed.jpg", "Mozaide/008_Jaz-mn.jpg", "Mozaide/009_Kamen.jpg", "Mozaide/010_Kazala.jpg", "Mozaide/011_Jing-jang.jpg", "Mozaide/012_Luna-gore.jpg", "Mozaide/014_Luna-sijaj.jpg", "Mozaide/015_Luna-nic.jpg"];
 
 //upgrades price------------------
-var p1_cap = 10;
+var p1_cap = 3.69;
 var p1_con = 1;
 var p1_pre = 1;
 
@@ -92,20 +92,22 @@ function paradoks(){
     conversion();
     hlap();
 }
-
+function kmn(){
+    if(e1 < 1){
+            e1 = e1 + k_k;
+            e1_skp = e1_skp + k_k;
+            
+    }
+}
 function passive(){
         e1 = e1+k_p + (m1*m1_p);
         e1_skp = e1_skp + k_p + (m1*m1_p);
 }
 function hlap(){
     if(m1 >0){
-        if(m1 >30 && m1< 50){
-            m1_h = 0.00005 * 2;
-        }else if (m1 > 50 && m1 < 100){
-            m1_h = 0.00005 * 4;
-        }else if (m1 > 100){
-            m1_h = 0.00005 * (m1/10);
-        }
+        if(m1 >10){
+            m1_h = 0.0005 * (m1/10);
+        }else{m1_h = 0.0005}
         m1 = m1 - m1_h;
     }else{
         m1 = 0;
@@ -143,8 +145,8 @@ function conversion(){
 function pret(){
     if(an_onf === 'off' && e1 > t_fee){
         an_onf = 'charge';
-        t_fa = t_fee* e1 + 0.1;
-        e1 = e1 - t_fa - (0.001 * e1);
+        t_fa = t_fee* e1;
+        e1 = e1 - t_fa;
          trn_gmb.style.animation ="spin 1s infinite";
     }else if(an_onf === 'charge'){
         an_onf= 'on';
