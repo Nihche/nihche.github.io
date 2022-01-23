@@ -12,8 +12,8 @@ var e1_skp = 0;//vsa energija skupaj
 
 //material------------------
 var m1 = 0;
-var m1_p = 0.00015;
-var m1_h = 0.00005;
+var m1_p = 0.000015;
+var m1_h = 0.000005;
 var m2 = 0; // d_mat v pretvorbi
 //mozaide------------------
 var mzd_prc = 1;
@@ -106,8 +106,8 @@ function passive(){
 function hlap(){
     if(m1 >0){
         if(m1 >10){
-            m1_h = 0.0005 * (m1/10);
-        }else{m1_h = 0.0005}
+            m1_h = 0.00005 * (m1/10);
+        }else{m1_h = 0.00005}
         m1 = m1 - m1_h;
     }else{
         m1 = 0;
